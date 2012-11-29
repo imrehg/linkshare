@@ -3,6 +3,14 @@
  var hello = function() {
    console.log('LinkedIn loaded')
  };
+
+ var success = function {
+   alert('Time to celebrate!');
+ };
+
+ var failure = function {
+   alert('That didn't work out);
+ };
 </script>
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
   api_key: <%= linkedin.apikey %>
@@ -11,5 +19,13 @@
 </script>
 <body>
 Hello!
+
+<script type="in/Login">
+Hello, <?js= firstName ?> <?js= lastName ?>.
+</script>
+
+<script type="IN/Share" data-url="http://bit.ly/UGcxoh" data-onSuccess="success" data-onError="failure"></script>
+
+
 </body>
 </html>
