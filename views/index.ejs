@@ -20,6 +20,8 @@ div.share {
  var failure = function() {
    alert("That didn't work out");
  };
+
+ var url = encodeURI("http://gergely.imreh.net/blog/2012/08/the-lean-startup-of-me/?utm_source=linkedin&utm_medium=click&utm_campaign=blog")
 </script>
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
   api_key: <%= linkedin.apikey %>
@@ -43,6 +45,8 @@ Hello, <?js= firstName ?> <?js= lastName ?>.
   Full link: <script type="IN/Share" data-url="http://gergely.imreh.net/blog/2012/11/the-internet-hates-programming/?utm_source=linkedin&utm_medium=click&utm_campaign=blog" data-onSuccess="success" data-onError="failure"></script>
 </div>
 
+<hr>
+
 <div class=share>
   Another bitly link: <script type="IN/Share" data-url="http://bit.ly/Tq0h9y" data-onSuccess="success" data-onError="failure"></script>
 </div>
@@ -51,13 +55,15 @@ Hello, <?js= firstName ?> <?js= lastName ?>.
   Full link of above: <script type="IN/Share" data-url="http://gergely.imreh.net/blog/2012/10/laboratory-2-0-a-monitoring-system/?utm_source=linkedin&utm_medium=click&utm_campaign=blog" data-onSuccess="success" data-onError="failure"></script>
 </div>
 
+<hr>
+
 <div class=share>
   And another bitly link: <script type="IN/Share" data-url="http://bit.ly/V7dVPe?utm_source=linkedin&utm_medium=click&utm_campaign=blog
 " data-onSuccess="success" data-onError="failure"></script>
 </div>
 
 <div class=share>
-  Full link of above: <script type="IN/Share" data-url="http://gergely.imreh.net/blog/2012/08/the-lean-startup-of-me/?utm_source=linkedin&utm_medium=click&utm_campaign=blog" data-onSuccess="success" data-onError="failure"></script>
+  Full link of above: <script type="IN/Share" data-url="encodeURI(http://gergely.imreh.net/blog/2012/08/the-lean-startup-of-me/?utm_source=linkedin&utm_medium=click&utm_campaign=blog&ask=why)" data-onSuccess="success" data-onError="failure"></script>
 </div>
 
 <div>
