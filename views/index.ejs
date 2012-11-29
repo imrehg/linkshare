@@ -1,4 +1,13 @@
 <html>
+<head>
+<title>LinkedIn Sharing test</title>
+<style>
+
+div.share {
+ padding: 20
+}
+
+</style>
 <script>
  var hello = function() {
    console.log("LinkedIn library loaded");
@@ -17,6 +26,7 @@
   onLoad: hello
   authorize: true
 </script>
+</head>
 <body>
 
 <div>
@@ -33,6 +43,9 @@ Hello, <?js= firstName ?> <?js= lastName ?>.
   Full link: <script type="IN/Share" data-url="http://gergely.imreh.net/blog/2012/11/the-internet-hates-programming/?utm_source=linkedin&utm_medium=click&utm_campaign=blog" data-onSuccess="success" data-onError="failure"></script>
 </div>
 
+<div>
+ <img srv="Share-with-Friends1.jpg" alt="Please do share!">
+</div>
 
 </body>
 </html>
