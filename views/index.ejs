@@ -1,14 +1,14 @@
 <html>
 <script>
  var hello = function() {
-   console.log('LinkedIn loaded')
+   console.log('LinkedIn loaded');
  };
 
- var success = function {
+ var success = function() {
    alert('Time to celebrate!');
  };
 
- var failure = function {
+ var failure = function() {
    alert('That didn't work out);
  };
 </script>
@@ -18,14 +18,16 @@
   authorize: true
 </script>
 <body>
-Hello!
 
+<div>
 <script type="in/Login">
 Hello, <?js= firstName ?> <?js= lastName ?>.
 </script>
+<div>
 
-<script type="IN/Share" data-url="http://bit.ly/UGcxoh" data-onSuccess="success" data-onError="failure"></script>
-
+<div>
+  <script type="IN/Share" data-url="http://bit.ly/UGcxoh" data-onSuccess="success" data-onError="failure"></script>
+</div>
 
 </body>
 </html>
