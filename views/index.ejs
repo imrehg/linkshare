@@ -1,0 +1,15 @@
+<html>
+<script>
+ var hello = function() {
+   console.log('LinkedIn loaded').
+ };
+</script>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+  api_key: <%= linkedin.apikey %>;
+  onLoad: hello;
+  authorize: true;
+</script>
+<body>
+Hello!
+</body>
+</html>
