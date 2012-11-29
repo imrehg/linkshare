@@ -1,6 +1,10 @@
 <html>
 <head>
 <title>LinkedIn Sharing test</title>
+<meta property="og:url" content="<%= host %><%= url%>"/>
+<meta property="og:title" content="LinkedIn Sharing Test"/>
+<meta property="og:summary" content="Trying Linked-in sharing with query parameters"/>
+<meta property="og:image" content="<%= host %>/Share-with-Friends1.jpg"/>
 <style>
 
 div.share {
@@ -30,6 +34,10 @@ div.share {
 </script>
 </head>
 <body>
+
+<div>
+ Url string: <%= url %>
+</div>
 
 <div>
 <script type="in/Login">
@@ -77,6 +85,12 @@ Hello, <?js= firstName ?> <?js= lastName ?>.
 
 <div class=share>
   Youtube search link with tracking: <script type="IN/Share" data-url="http://www.youtube.com/results?search_query=ignite+taipei&page=&utm_source=opensearch" data-onSuccess="success" data-onError="failure"></script>
+</div>
+
+<hr>
+
+<div class=share>
+  This page: <script type="IN/Share" data-url="" data-onSuccess="success" data-onError="failure"></script>
 </div>
 
 
