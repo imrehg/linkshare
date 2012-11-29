@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>LinkedIn Sharing test</title>
-<meta property="og:url" content="http://<%= host %><%= url%>"/>
+<meta property="og:url" content="http://<%= host %><%= path%>?<%- query_str%>"/>
 <meta property="og:title" content="LinkedIn Sharing Test"/>
 <meta property="og:description" content="Trying Linked-in sharing with query parameters"/>
 <meta property="og:image" content="http://<%= host %>/Share-with-Friends1.jpg"/>
@@ -36,7 +36,7 @@ div.share {
 <body>
 
 <div>
- Url string: <%= url %>
+ Query string: <%= query_str %>
 </div>
 
 <div>

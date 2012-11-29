@@ -1,4 +1,5 @@
 var express = require('express');
+var querystring = require('querystring');
 var url = require('url');
 var app = express();
 
@@ -8,11 +9,17 @@ linkedin.apikey = process.env.LINKEDIN_API;
 app.use(express.static(__dirname+'/public'));
 
 app.get('/', function(req, res) {
+    var url_parts = url.parse(req.url, true)
+    var query_pars = url_parts.query;
+    var query_str = querystring.stringify(query_pars);
+    console.log(query_str);
+
     res.render('index.ejs', {
 	layout:false,
 	linkedin: linkedin,
 	host: req.header('host'),
-	url: req.url
+	path: url_parts.pathname,
+	query_str: query_str
     });
 });
 
