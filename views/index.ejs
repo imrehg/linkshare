@@ -25,7 +25,6 @@ div.share {
    alert("That didn't work out");
  };
 
- var url = encodeURI("http://gergely.imreh.net/blog/2012/08/the-lean-startup-of-me/?utm_source=linkedin&utm_medium=click&utm_campaign=blog")
 </script>
 <script type="text/javascript" src="http://platform.linkedin.com/in.js">
   api_key: <%= linkedin.apikey %>
@@ -36,7 +35,8 @@ div.share {
 <body>
 
 <div>
- Query string: <%= query_str %>
+ Current query string: <b><%= query_str %></b><br>
+ (add some query string parts to the URL to test)
 </div>
 
 <div>
@@ -46,10 +46,11 @@ Hello, <?js= firstName ?> <?js= lastName ?>.
 <div>
 
 <div class=share>
-  This page: <script type="IN/Share" data-url="" data-onSuccess="success" data-onError="failure"></script>
+  Share this page: <script type="IN/Share" data-url="" data-onSuccess="success" data-onError="failure"></script>
+  <!-- data-url can be filled out with anything -->
 </div>
 
-<div>
+<div class=share>
  Try this page: <a href="http://<%= host %><%= path%>?utm_source=linkedin&utm_medium=click&utm_campaign=blog&this=stays">prefilled campain variables</a>
 </div>
 
